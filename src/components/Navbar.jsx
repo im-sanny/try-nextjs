@@ -27,6 +27,14 @@ const Navbar = () => {
       title: "Blogs",
       path: "/blogs",
     },
+    {
+      title: "Categories",
+      path: "/categories",
+    },
+    {
+      title: "Dashboard",
+      path: "/dashboard",
+    },
   ];
 
   const handler = () => {
@@ -34,7 +42,7 @@ const Navbar = () => {
   };
 
   if (pathName.includes("dashboard"))
-    return( <div className="bg-green-400">Dashboard layout</div>)
+    return <div className="bg-green-400">Dashboard layout</div>;
 
   return (
     <div>
@@ -56,7 +64,7 @@ const Navbar = () => {
           ))}
         </ul>
         <button
-          onClick={handler()}
+          onClick={handler}
           className="bg-white bg text-teal-700 font-bold p-2 rounded-md"
         >
           Login
@@ -65,3 +73,5 @@ const Navbar = () => {
     </div>
   );
 };
+
+export default Navbar;

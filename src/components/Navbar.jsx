@@ -23,11 +23,18 @@ const Navbar = () => {
       title: "Contacts",
       path: "/contacts",
     },
+    {
+      title: "Blogs",
+      path: "/blogs",
+    },
   ];
 
   const handler = () => {
     router.push("/login");
   };
+
+  if (pathName.includes("dashboard"))
+    return( <div className="bg-green-400">Dashboard layout</div>)
 
   return (
     <div>
@@ -49,7 +56,7 @@ const Navbar = () => {
           ))}
         </ul>
         <button
-          onClick={handler}
+          onClick={handler()}
           className="bg-white bg text-teal-700 font-bold p-2 rounded-md"
         >
           Login
